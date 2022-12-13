@@ -82,6 +82,7 @@ app.post("/login", async (req, res)=>{
             })
             user.token = token
             await user.save()
+            user.password = null
         }
         const options = {  
             sameSite: "none",
@@ -98,7 +99,7 @@ app.post("/login", async (req, res)=>{
 
     } catch(error){
         console.log("Login route error")
-        console.log("Error: ",error);
+        console.log("Error Message: ",error.message);
         res.status(400).json({
             success:false,
             error
