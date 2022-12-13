@@ -12,7 +12,7 @@ const cors = require("cors")
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(cookieParser())
-app.use(cors({credentials:true, origin: "http://localhost:3000"}))
+app.use(cors({credentials:true, origin: "https://cookie-auth-aarya.vercel.app/"}))
 
 app.get("/", (req, res)=>{
     res.send("<h1>Home route</h1>")
