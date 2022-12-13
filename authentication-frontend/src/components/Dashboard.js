@@ -7,7 +7,7 @@ const Dashboard = () => {
 
     const fetchUser = async () => {
         try {
-            const response = await axios.get("http://localhost:4000/dashboard", {withCredentials:true} )
+            const response = await axios.get("https://cookie-auth-aarya.up.railway.app/dashboard", {withCredentials:true} )
             console.log(response);
             setUser(response.data.user)
         } catch (error) {

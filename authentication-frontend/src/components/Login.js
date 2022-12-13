@@ -14,7 +14,7 @@ const Login = () => {
     const handleSubmit = async (event) => {
         event.preventDefault()
         try {
-            const response = await axios.post("http://localhost:4000/login", userDetails)
+            const response = await axios.post("https://cookie-auth-aarya.up.railway.app/login", userDetails)
             console.log(response);
             setUserDetails({
                 email: "",

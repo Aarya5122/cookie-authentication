@@ -12,7 +12,7 @@ const Signup = () => {
     const handleSubmit = async (event) => {
         event.preventDefault()
         try {
-            const response = await axios.post("http://localhost:4000/register", userDetails, {withCredentials: true})
+            const response = await axios.post("https://cookie-auth-aarya.up.railway.app/register", userDetails, {withCredentials: true})
             console.log(response);
             setUserDetails({
                 name:"",
